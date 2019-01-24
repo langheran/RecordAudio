@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "c:\\Users\\langh\\Utilities\\Autohotkey\\RecordAudio\\RecordAudio.csproj",
+  "TargetFramework": "net461",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}

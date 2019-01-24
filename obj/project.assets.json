@@ -1,0 +1,157 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.6.1": {
+      "NAudio/1.8.5": {
+        "type": "package",
+        "compile": {
+          "lib/net35/NAudio.dll": {}
+        },
+        "runtime": {
+          "lib/net35/NAudio.dll": {}
+        }
+      },
+      "System.Windows.Forms/4.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/System.Windows.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/System.Windows.Forms.dll": {}
+        }
+      },
+      "UnmanagedExports/1.2.7": {
+        "type": "package",
+        "compile": {
+          "lib/net/RGiesecke.DllExport.Metadata.dll": {}
+        },
+        "runtime": {
+          "lib/net/RGiesecke.DllExport.Metadata.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NAudio/1.8.5": {
+      "sha512": "kLvCjDm9et0n2ITibT0WMXml0ZjOG0lnKlXIDzd2rmD/gi3UAH7rM/H4Gs9yOmc5ODMPfF6PFzcaPskH4praXA==",
+      "type": "package",
+      "path": "naudio/1.8.5",
+      "files": [
+        ".signature.p7s",
+        "lib/net35/NAudio.XML",
+        "lib/net35/NAudio.dll",
+        "lib/uap10.0/NAudio.Universal.XML",
+        "lib/uap10.0/NAudio.Universal.dll",
+        "license.txt",
+        "naudio.1.8.5.nupkg.sha512",
+        "naudio.nuspec"
+      ]
+    },
+    "System.Windows.Forms/4.0.0": {
+      "sha512": "SpwsmXGtJZPj4RjJuO/l01uR44uu9nhZGz7JI9J8x078fdT6jhyRk1qPuppDotdpXlG7Jk6s/L0aFudDmmDzDA==",
+      "type": "package",
+      "path": "system.windows.forms/4.0.0",
+      "files": [
+        ".signature.p7s",
+        "lib/System.Windows.Forms.dll",
+        "system.windows.forms.4.0.0.nupkg.sha512",
+        "system.windows.forms.nuspec"
+      ]
+    },
+    "UnmanagedExports/1.2.7": {
+      "sha512": "K2gOT4b1r3nFHtTmd0jS1G9hwg1arJ3Vwkg+LibUEhTH2TY5P57EwDX/WY4TAC7LNtzmlBHbYiqtWswbwtXOpA==",
+      "type": "package",
+      "path": "unmanagedexports/1.2.7",
+      "files": [
+        ".signature.p7s",
+        "lib/net/RGiesecke.DllExport.Metadata.dll",
+        "tools/DllExportCmdLets.psm1",
+        "tools/Mono.Cecil.dll",
+        "tools/RGiesecke.DllExport.MSBuild.dll",
+        "tools/RGiesecke.DllExport.MSBuild.pdb",
+        "tools/RGiesecke.DllExport.dll",
+        "tools/RGiesecke.DllExport.pdb",
+        "tools/RGiesecke.DllExport.targets",
+        "tools/init.ps1",
+        "tools/install.ps1",
+        "tools/uninstall.ps1",
+        "unmanagedexports.1.2.7.nupkg.sha512",
+        "unmanagedexports.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.6.1": [
+      "NAudio >= 1.8.5",
+      "System.Windows.Forms",
+      "UnmanagedExports >= 1.2.7"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\langh\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\langh\\Utilities\\Autohotkey\\RecordAudio\\RecordAudio.csproj",
+      "projectName": "RecordAudio",
+      "projectPath": "C:\\Users\\langh\\Utilities\\Autohotkey\\RecordAudio\\RecordAudio.csproj",
+      "packagesPath": "C:\\Users\\langh\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\langh\\Utilities\\Autohotkey\\RecordAudio\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\langh\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net461"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net461": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net461": {
+        "dependencies": {
+          "NAudio": {
+            "target": "Package",
+            "version": "1.8.5"
+          },
+          "UnmanagedExports": {
+            "target": "Package",
+            "version": "1.2.7"
+          },
+          "System.Windows.Forms": {
+            "target": "Package",
+            "version": "(, )"
+          }
+        }
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1604",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Project dependency System.Windows.Forms does not contain an inclusive lower bound. Include a lower bound in the dependency version to ensure consistent restore results.",
+      "libraryId": "System.Windows.Forms",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.6.1"
+      ]
+    }
+  ]
+}

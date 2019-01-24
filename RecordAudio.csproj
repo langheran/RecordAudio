@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="NAudio" Version="1.8.5"/>
+    <PackageReference Include="UnmanagedExports" Version="1.2.7"/>
+    <PackageReference Include="System.Windows.Forms" HintPath="\..\WINDOWS\Microsoft.NET\Framework\v4.0.30319"/>
+  </ItemGroup>
+</Project>
