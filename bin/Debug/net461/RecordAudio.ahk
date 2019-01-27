@@ -8,11 +8,17 @@ CLR_Start()
 asm := CLR_LoadLibrary("RecordAudio.dll")
 global recordAudio := asm.CreateInstance("RecordAudio.Class1")
 FileBaseName:=A_Desktop . "/record_ " 
-recordAudio.StartRecording(GetFileName(FileBaseName))
+CandidateFilename:=GetFileName(FileBaseName)
+recordAudio.StartRecording(CandidateFilename)
 return
 
 ExitAppSub:
 recordAudio.StopRecording()
+SplitPath, CandidateFilename, name, dir, ext, name_no_ext
+CandidateFilename1=%dir%/%name_no_ext%.mp3
+RunWait, ffmpeg -i "%CandidateFilename%" "%CandidateFilename1%",,UseErrorLevel
+if(FileExist(CandidateFilename1) && !ErrorLevel)
+    FileDelete, %CandidateFilename%
 ExitApp
 
 GetFileName(FileBaseName)
@@ -23,7 +29,8 @@ GetFileName(FileBaseName)
     {
         FileNumber += 1.0
         CandidateFilename = %FileBaseName%%FileNumber%.wav
-        IfNotExist, %CandidateFilename%   ; Empty slot found.
+        CandidateFilename1 = %FileBaseName%%FileNumber%.mp3
+        If (!FileExist(CandidateFilename) && !FileExist(CandidateFilename1))   ; Empty slot found.
             break
     }
     return CandidateFilename

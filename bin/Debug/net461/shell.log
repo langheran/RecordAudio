@@ -1,0 +1,23 @@
+2019-01-27 14:19:05 - using System;
+2019-01-27 14:19:05 - using System.Collections.Generic;
+2019-01-27 14:19:05 - using System.Linq;
+2019-01-27 14:19:05 - using System.Text;
+2019-01-27 14:19:05 - using System.Threading.Tasks;
+2019-01-27 14:19:05 - using ICSharp.Kernel;
+2019-01-27 14:19:05 - // Adding default usings. This file is included for each notebook when it starts.
+2019-01-27 14:19:34 - shutdown request
+2019-01-27 14:19:34 - using System;
+2019-01-27 14:19:34 - using System.Collections.Generic;
+2019-01-27 14:19:34 - using System.Linq;
+2019-01-27 14:19:34 - using System.Text;
+2019-01-27 14:19:34 - using System.Threading.Tasks;
+2019-01-27 14:19:34 - using ICSharp.Kernel;
+2019-01-27 14:19:34 - // Adding default usings. This file is included for each notebook when it starts.
+2019-01-27 14:22:15 - shutdown request
+2019-01-27 14:22:15 - using System;
+2019-01-27 14:22:15 - using System.Collections.Generic;
+2019-01-27 14:22:15 - using System.Linq;
+2019-01-27 14:22:15 - using System.Text;
+2019-01-27 14:22:15 - using System.Threading.Tasks;
+2019-01-27 14:22:15 - using ICSharp.Kernel;
+2019-01-27 14:22:15 - // Adding default usings. This file is included for each notebook when it starts.
