@@ -91,16 +91,29 @@ namespace RecordAudio
             this.MicrophoneCapture.StopRecording();
             while (this.MicrophoneWriter != null || this.LoopbackWriter != null)
             { }
+            this.MixRecordings(this.outputFilePath, this.LoopbackFilePath, this.MicrophoneFilePath, true);
+        }
+
+        [DllExport("MixRecordings", CallingConvention = CallingConvention.Cdecl)]
+        public void MixRecordings(string outputFilePath, string LoopbackFilePath, string MicrophoneFilePath, bool deleteSources = false)
+        {
+            this.outputFilePath = outputFilePath;
+            this.LoopbackFilePath = LoopbackFilePath;
+            this.MicrophoneFilePath = MicrophoneFilePath;
+
             using (var loopbackReader = new AudioFileReader(this.LoopbackFilePath))
             using (var microphoneReader = new AudioFileReader(this.MicrophoneFilePath))
             {
                 var mixer = new MixingSampleProvider(new[] { loopbackReader, microphoneReader });
                 WaveFileWriter.CreateWaveFile16(this.outputFilePath, mixer);
             }
-            if (File.Exists(this.LoopbackFilePath))
-                File.Delete(this.LoopbackFilePath);
-            if (File.Exists(this.MicrophoneFilePath))
-                File.Delete(this.MicrophoneFilePath);
+            if (File.Exists(this.outputFilePath) && deleteSources)
+            {
+                if (File.Exists(this.LoopbackFilePath))
+                    File.Delete(this.LoopbackFilePath);
+                if (File.Exists(this.MicrophoneFilePath))
+                    File.Delete(this.MicrophoneFilePath);
+            }
         }
     }
 }

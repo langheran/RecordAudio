@@ -1,0 +1,1 @@
+ffmpeg -i "record_ 0001_i.wav" -i "record_ 0001_m.wav" -filter_complex amerge -ac 2 -c:a libmp3lame -q:a 4 "record_ 0001.mp3"
