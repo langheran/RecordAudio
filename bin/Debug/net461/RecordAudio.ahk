@@ -7,7 +7,7 @@ OnExit, ExitAppSub
 CLR_Start()
 asm := CLR_LoadLibrary("RecordAudio.dll")
 global recordAudio := asm.CreateInstance("RecordAudio.Class1")
-FileBaseName:=A_Desktop . "/record_ " 
+FileBaseName:=A_Desktop . "/record_" 
 CandidateFilename:=GetFileName(FileBaseName)
 recordAudio.StartRecording(CandidateFilename)
 return

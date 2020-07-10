@@ -1,0 +1,1 @@
+ffmpeg -loop 1 -i video.jpg -i record_0001.mp3 -shortest -acodec copy audio.mp4
