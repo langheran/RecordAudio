@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "ALTPDmzmeGe7KgZze+ckGtszkmQKvHWe3zz1lRpzuxBuMjAeGzhWuA58zHLfyyQQTw+cRLCfvSRJuPkM/yqPIQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\langh\\Utilities\\Autohotkey\\RecordAudio\\RecordAudio.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\langh\\.nuget\\packages\\naudio\\1.8.5\\naudio.1.8.5.nupkg.sha512",
+    "C:\\Users\\langh\\.nuget\\packages\\system.windows.forms\\4.0.0\\system.windows.forms.4.0.0.nupkg.sha512",
+    "C:\\Users\\langh\\.nuget\\packages\\unmanagedexports\\1.2.7\\unmanagedexports.1.2.7.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1604",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Project dependency System.Windows.Forms does not contain an inclusive lower bound. Include a lower bound in the dependency version to ensure consistent restore results.",
+      "libraryId": "System.Windows.Forms",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.6.1"
+      ]
+    }
+  ]
+}

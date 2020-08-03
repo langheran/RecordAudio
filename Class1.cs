@@ -91,7 +91,7 @@ namespace RecordAudio
             this.MicrophoneCapture.StopRecording();
             while (this.MicrophoneWriter != null || this.LoopbackWriter != null)
             { }
-            this.MixRecordings(this.outputFilePath, this.LoopbackFilePath, this.MicrophoneFilePath, true);
+            // this.MixRecordings(this.outputFilePath, this.LoopbackFilePath, this.MicrophoneFilePath, true);
         }
 
         [DllExport("MixRecordings", CallingConvention = CallingConvention.Cdecl)]

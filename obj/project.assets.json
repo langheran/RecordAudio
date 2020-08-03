@@ -33,10 +33,11 @@
   },
   "libraries": {
     "NAudio/1.8.5": {
-      "sha512": "kLvCjDm9et0n2ITibT0WMXml0ZjOG0lnKlXIDzd2rmD/gi3UAH7rM/H4Gs9yOmc5ODMPfF6PFzcaPskH4praXA==",
+      "sha512": "ATbzKXZtbyXKnNfHlpPC+SLGnX9pqZ4/YQfL9Vd1CPYdBgw0v2vas5s0ZhLpFyimt3n3hYvyElyarowpeaO+Tg==",
       "type": "package",
       "path": "naudio/1.8.5",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "lib/net35/NAudio.XML",
         "lib/net35/NAudio.dll",
@@ -48,10 +49,11 @@
       ]
     },
     "System.Windows.Forms/4.0.0": {
-      "sha512": "SpwsmXGtJZPj4RjJuO/l01uR44uu9nhZGz7JI9J8x078fdT6jhyRk1qPuppDotdpXlG7Jk6s/L0aFudDmmDzDA==",
+      "sha512": "WL3QPG1q88aIWO0JPOlkCeyNE+FK4ufSKY5j6J6qAFQyfCFiiOYxi8RAhev9H0CS/wmKbIK8qr8xZBod85oWKw==",
       "type": "package",
       "path": "system.windows.forms/4.0.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "lib/System.Windows.Forms.dll",
         "system.windows.forms.4.0.0.nupkg.sha512",
@@ -59,10 +61,12 @@
       ]
     },
     "UnmanagedExports/1.2.7": {
-      "sha512": "K2gOT4b1r3nFHtTmd0jS1G9hwg1arJ3Vwkg+LibUEhTH2TY5P57EwDX/WY4TAC7LNtzmlBHbYiqtWswbwtXOpA==",
+      "sha512": "bPIbzFaAj4AFxjHGFGPrYnUSCyIWJMkT/LFuiphWdpUbO2L9fP68W/1SP9cHCAxgiekV+kFNbybA2VvRo8PYIQ==",
       "type": "package",
       "path": "unmanagedexports/1.2.7",
+      "hasTools": true,
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "lib/net/RGiesecke.DllExport.Metadata.dll",
         "tools/DllExportCmdLets.psm1",
@@ -104,12 +108,14 @@
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\langh\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\langh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net461"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -128,17 +134,18 @@
         "dependencies": {
           "NAudio": {
             "target": "Package",
-            "version": "1.8.5"
-          },
-          "UnmanagedExports": {
-            "target": "Package",
-            "version": "1.2.7"
+            "version": "[1.8.5, )"
           },
           "System.Windows.Forms": {
             "target": "Package",
             "version": "(, )"
+          },
+          "UnmanagedExports": {
+            "target": "Package",
+            "version": "[1.2.7, )"
           }
-        }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
       }
     }
   },

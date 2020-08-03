@@ -1,0 +1,62 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\langh\\Utilities\\Autohotkey\\RecordAudio\\RecordAudio.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\langh\\Utilities\\Autohotkey\\RecordAudio\\RecordAudio.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\langh\\Utilities\\Autohotkey\\RecordAudio\\RecordAudio.csproj",
+        "projectName": "RecordAudio",
+        "projectPath": "C:\\Users\\langh\\Utilities\\Autohotkey\\RecordAudio\\RecordAudio.csproj",
+        "packagesPath": "C:\\Users\\langh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\langh\\Utilities\\Autohotkey\\RecordAudio\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\langh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net461"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net461": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net461": {
+          "dependencies": {
+            "NAudio": {
+              "target": "Package",
+              "version": "[1.8.5, )"
+            },
+            "System.Windows.Forms": {
+              "target": "Package",
+              "version": "(, )"
+            },
+            "UnmanagedExports": {
+              "target": "Package",
+              "version": "[1.2.7, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
