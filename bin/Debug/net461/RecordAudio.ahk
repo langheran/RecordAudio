@@ -5,7 +5,7 @@ Menu, Tray, NoStandard
 Menu, Tray, Add, &Salir, ExitAppSub
 
 SetWorkingDir, %A_ScriptDir%
-
+SetTimer, AlertWindow, 300000
 OnExit, ExitAppSub
 CLR_Start()
 asm := CLR_LoadLibrary("RecordAudio.dll")
@@ -15,7 +15,7 @@ CandidateFilename:=GetFileName(FileBaseName)
 recordAudio.StartRecording(CandidateFilename)
 return
 
-F12::
+^F12::
 MsgBox, 4,Monitorear, Monitor window for recording %Title%? (Si o No)
 IfMsgBox, Yes
 {
@@ -28,6 +28,54 @@ else
     SetTimer, MonitorWindow, Off
 }
 return
+
+AlertWindow:
+ShowTooltipRight("A", "Audio...")
+return
+
+RemoveToolTip:
+SetTimer, RemoveToolTip, Off
+ToolTip
+return
+
+ShowTooltipRight(title, text, timeout=1000){
+	global previousTooltipText
+	global tW
+
+	if(previousTooltipText=text)
+	{
+		SetTimer, RemoveToolTip, %timeout%
+		if(WinExist("ahk_class tooltips_class32 ahk_exe helper.exe"))
+			return
+	}
+
+	CalculateToolTipDisplayRight(text, title)
+	CoordMode, ToolTip, Screen
+	DetectHiddenWindowsBkp:=A_DetectHiddenWindows
+	DetectHiddenWindows, off
+	WinGetPos, Xt, Yt, Wt, , % title
+	toolTipX:=Xt+Wt-tW
+	toolTipY:=Yt
+	if(!title)
+	{
+		toolTipX:=0
+		toolTipY:=0
+	}
+	ToolTip, %text%, %toolTipX%, %toolTipY%
+	previousTooltipText:=text
+	SetTimer, RemoveToolTip, %timeout%
+	DetectHiddenWindows, %DetectHiddenWindowsBkp%
+}
+
+CalculateToolTipDisplayRight(CData, title) {
+	global tW
+	global tH
+	CoordMode, ToolTip, Screen
+	ToolTip, %CData%,,A_ScreenHeight+100
+	WinGetPos,,, tW, tH, ahk_class tooltips_class32 ahk_exe helper.exe
+	ToolTip
+	Return
+}
 
 MonitorWindow:
 if(guid_id && !WinExist("ahk_id " . guid_id))
